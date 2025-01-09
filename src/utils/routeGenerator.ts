@@ -1,17 +1,7 @@
-import { ReactNode } from "react";
+import { TRoute, TUserPath } from "../types";
 
-type TRoute = {
-  path: string;
-  element: ReactNode;
-};
 
-export type TUserPath = {
-name:string,
-path?: string,
-element?: ReactNode,
-chi
-ldren: TUserPath[]
-}
+
 export const routeGenerator = (items : TUserPath[]) => {
      const routes = items.reduce((acc: TRoute[], item) => {
       if (item.path && item.element) {
